@@ -1,0 +1,216 @@
+;;;Eventø° ∞¸∞Ëµ» personø° "king"¿Ã æ¯¿ª ºˆ ¿÷¡ˆ∏∏,
+;;;∆Ì¿«∏¶ ¿ß«ÿº≠ Eventπﬂª˝ Ω√±‚ø° ¿Á¿ß¡ﬂ¿Ãæ˙¥¯ ø’¿ª ≥÷æÓ¡ÿ
+;;;king ΩΩ∑‘¿« valueµµ instance√≥∑≥ *«•Ω√∏¶ «ÿ ¡÷æ˙¿Ω
+;;; ¬¸∞Ì∑Œ ƒı∏Æø° « ø‰«— ∞¥√º ª˝º∫¿ª πÃ∏Æ «ÿ¡‡æﬂ«œπ«∑Œ
+;;;(the person of (the all-instances of Event))
+;;;(the place of (the all-instances of Event))
+;;;(the name of (the event of (the person of *Righteous-Army)))
+;;;¿ß¿« ºº ¡Ÿ∞˙ ∞∞¿∫ Query∏¶ ≈Î«ÿº≠ πÃ∏Æ ∞¥√º ª˝º∫¿ª «ÿ¡‡æﬂ«‘
+;;;--------------------------------------------------------------------------
+;;; 0. superclass¿«  instance---------------------------------------------
+
+(Event has (instances (*Gyeyou-Junglan *Party-Poet *Imoh-Whabyun   *Knighthood
+                                   *Chunhyangjun *Jungjong-banjung *Kisa-whankuk
+                                   *Righteous-Army *Lady-Poet)))
+
+;;; 1. ∞Ë¿Ø¡§≥≠ ---------------------------------------------------------
+
+(*Gyeyou-Junglan has
+                 (name (*Gyeyou-Junglan))
+                 (subject (trust))
+                 (time (1453))
+                 (king (*Dan-jong))
+                 (person 
+                  (((a Person with 
+                       (name (*Dan-jong))
+                       (kill-of (*Suyang-Daegun))))
+                   
+                   ((a Person with 
+                       (name (*Suyang-Daegun))
+                       (son-of (SejongDaewang))
+                       (brother (*Dan-jong))))
+                   
+                   ((a Person with 
+                       (name (*Sayookshin))
+                       (workSpace (((a Place with
+                                       (name (Jibhyeonjeon))
+                                       (made-by ((the son-of of *Suyang-Daegun)))
+                                       (Si (Seoul))
+                                       (distance (1))))))
+                       (trustful (*Dan-jong))))))
+                 
+                 (place (((a Place with
+                             (Do (Kangwon))
+                             (Si (Yeongwol))
+                             (distance (136)))))))
+
+;;; 2. πÊ∂˚Ω√¿Œ --------------------------------------------------------
+
+(*Party-Poet has
+             (name (*Party-Poet))
+             (subject (party))
+             (time (1800))
+             (king (*Jung-jo))
+             (person
+              (((a Person with 
+                   (name (*Kim-satkat))
+                   (write (bamboo-poet))))))
+             (place
+              (((a Place with
+                   (Do (Kangwon))
+                   (Si (Yeongwol))
+                   (distance (136)))))))
+
+;;; 3. ¿”ø¿»≠∫Ø-----------------------------------------------
+
+(*Imoh-Whabyun has
+               (name (*Imoh-Whabyun))
+               (subject (parent-loving))
+               (time (1762))
+               (king (*Yeong-jo))
+               (person
+                (((a Person with 
+                     (name (*Sado-seja))
+                     (kill-of (*Yeong-jo))
+                     (son-of (*yeong-jo))))
+                 ((a Person with 
+                     (name (*Yeong-jo))
+                     (kill (*Sado-seja))
+                     (love 
+                      (((a Person with
+                           (name (*Jung-jo))
+                           (son-of (*Sado-seja))
+                           (build (Kyujangkak))
+                           (employ (Jang-yeongsil))))))))))
+               (place 
+                (((a Place with 
+                     (Do (Kyungki))
+                     (Si (Whasung))
+                     (distance (46)))))))
+
+;;; 4. Knighthood(¿«≥‡π›ºˆ) ----------------------------------------
+
+(*Knighthood has
+             (name (*Knighthood))
+             (subject (Enterpreneurship Feminism))
+             (time (1794))
+             (king (*Jung-jo))
+             (person
+              (((a Person with
+                   (name (*Kim-manduck))
+                   (sex (female))
+                   (donate (rice-for-people))
+                   (resemble 
+                    ((*Sinsaimdang)))))))
+             (place
+              (((a Place with
+                   (Do (Jeju))
+                   (distance (452)))))))
+
+;;; 5. √·«‚¿¸ -----------------------------------------------------------
+
+(*Chunhyangjun has
+               (name (*Chunhyangjun))
+               (subject (Love))
+               (time (1700))
+               (king (*Sook-jong))
+               (person
+                (((a Person with 
+                     (name (*Chun-hyang))
+                     (love (*Mong-ryong))))
+                 ((a Person with 
+                     (name (*Mong-ryong))
+                     (love (*Chun-hyang))))))
+               (place 
+                (((a Place with
+                     (Do (Junla))
+                     (Si (Namwon))
+                     (distance (237)))))))
+
+;;; 6. ¡ﬂ¡æπ›¡§ ---------------------------------------------------
+(*Jungjong-banjung has
+                   (name (*Jungjong-banjung))
+                (subject (Love))
+                (time (1494))
+                (king (*Yeonsangun))
+                (person
+                 (((a Person with 
+                      (name (*Yeonsangun))))
+                  ((a Person with 
+                      (name (*Jang-noeksu))
+                      (resemble (*Jang-huibin))))))
+                (place (((a Place with
+                            (Si (Seoul))
+                            (distance (1)))))))
+
+;;; 7. ±‚ªÁ»Ø±π --------------------------------------------------------
+(*Kisa-whankuk has
+               (name (*Kisa-whankuk))
+               (subject (Love))
+               (time (1494))
+               (king (*Sook-jong))
+               (person
+                (((a Person with 
+                     (name (*Sook-jong))
+                     (love (*Jang-huibin))))
+                 ((a Person with 
+                     (name (*Jang-huibin))
+                     (kill-of (*Sook-jong))
+                     (wife (*Sook-jong))
+                     (hate (*Inhyun-wanghu))))
+                 ((a Person with 
+                     (name (*Inhyun-wanghu))
+                     (wife (*Sook-jong))))))
+               (place
+                (((a Place with
+                     (Si (Seoul))
+                     (distance (1)))))))
+
+;;; 8. ¿«∫¥øÓµø ---------------------------------------------
+
+(*Righteous-Army has
+                 (name (*Righteous-Army))
+                      (subject (trust))
+                      (time (1568))
+                      (king (*Sun-jo))
+                      (person 
+                       (((a Person with 
+                            (name (*Choi-Jinlib))
+                            (job (*Righteous-soldier))
+                            (event ((a Event with
+                                       (name (*Imjin-whelan))
+                                       (time (1592)))))
+                            (son (((a Person with
+                                      (name (*Choi-gukseon))
+                                      (donate (rice-for-people))))))))))
+                      (place
+                       (((a Place with
+                            (Do (Kyungsang))
+                            (Si (Kyungju))
+                            (distance (269)))))))
+
+;;; 9. ø©∑˘Ω√¿Œ --------------------------------------------------------
+
+(*Lady-Poet has
+            (name (*Lady-Poet))
+            (subject (Feminism))
+            (time (1504))
+            (king (*Yeonsangun))
+            (person
+             (((a Person with 
+                  (name (*Sinsaimdang))
+                  (sex (female))
+                  (paint (Chochungdo))
+                  (printed-money (50000won))
+                  (mother-of (((a Person with
+                                  (name (*Yulgeok-ii))
+                                  (write (make-hundredthausand-soldier))
+                                  (printed-money (5000won))
+                                  (live ((the Si of (the place of *Lady-poet))))))))))))
+            (place
+             (((a Place with
+                  (Do (Kangwon))
+                  (Si (gangleung))
+                  (distance (170)))))))
+
+;;;---------------------------------------------------------------------------
